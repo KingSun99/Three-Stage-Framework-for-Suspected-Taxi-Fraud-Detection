@@ -1,0 +1,27 @@
+{
+  "seed": 43,
+  "method": "smotenc",
+  "bo_seed": 43,
+  "bo_calls": 50,
+  "bo_seconds": 251.89436299999943,
+  "best_validation_accuracy": 1.0,
+  "model_parameters": {
+    "n_jobs": 4,
+    "tree_method": "hist",
+    "random_state": 43,
+    "eval_metric": "mlogloss",
+    "objective": "multi:softprob",
+    "num_class": 5,
+    "n_estimators": 180,
+    "learning_rate": 0.4688735275825345,
+    "max_depth": 12,
+    "min_child_weight": 20,
+    "gamma": 8.290723457658812,
+    "subsample": 0.4301955550519361,
+    "colsample_bytree": 0.5876238915829527,
+    "reg_lambda": 4.427587241785174,
+    "reg_alpha": 7.233151916245053
+  },
+  "bo_rows": 434700,
+  "final_fit_rows": 443700
+}

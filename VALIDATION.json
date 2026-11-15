@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-15",
+  "source_archive": "NYC_AugustPrior_Reproducibility_20261019",
+  "scope": "Table 7 frozen-model inference and cohort replay",
+  "manuscript": {
+    "basis": "Manuscript_1022_R2_unmarked_compressed.docx",
+    "file_sha256": "bbc711e3bed8b17cc97361e4deb62826056543f6723d67cd94c9bacc0abe49f9",
+    "table_7_numeric_values_checked": 360,
+    "table_7_matches_to_reported_precision": true,
+    "table_8_included": false
+  },
+  "classifier_replay": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "models": 25,
+    "dataset_evaluations": 50,
+    "metrics_per_evaluation": [
+      "accuracy",
+      "macro_f1",
+      "balanced_accuracy"
+    ],
+    "max_absolute_metric_difference": 0.0,
+    "row_level_prediction_files_checked": 50,
+    "row_level_prediction_values_checked": 10518700,
+    "class_metric_values_checked": 1000,
+    "matches_source_archive": true,
+    "matches_fresh_replay": true
+  },
+  "gan_checkpoints": {
+    "families": [
+      "ctgan",
+      "pctgan"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "files_verified": 25,
+    "bytes": 37977642,
+    "all_files_match_source_archive": true
+  },
+  "gan_sampling_smoke_test": {
+    "cpu_smoke_tests": [
+      {
+        "family": "ctgan",
+        "seed": 42,
+        "rows_per_class": 1
+      },
+      {
+        "family": "pctgan",
+        "seed": 42,
+        "rows_per_class": 1
+      }
+    ],
+    "all_classes_generated": true
+  },
+  "stratified_splits": {
+    "all_five_seeds_match_archived_record_ids_and_labels": true
+  },
+  "clustering": {
+    "all_labels_match": true,
+    "rows": 50000,
+    "clusters": 5,
+    "noise_rows": 0
+  },
+  "python": "3.12.2",
+  "versions": {
+    "scikit-learn": "1.5.2",
+    "xgboost": "2.1.4",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "pyarrow": "22.0.0"
+  },
+  "syntax_checked": [
+    "code/augmentation.py",
+    "code/behavior_features.py",
+    "code/data.py",
+    "code/diagnostic_sampling.py",
+    "code/exact_gan_sampling.py",
+    "code/joint_conditional_gan.py",
+    "code/memory_dbscan.py",
+    "code/pipeline_utils.py",
+    "code/search.py",
+    "preprocess.py",
+    "reproduce_clustering.py",
+    "run.py"
+  ],
+  "not_rerun_in_this_audit": [
+    "500-epoch GAN fitting",
+    "50-call BO-XGB searches",
+    "full monthly raw-data reconstruction",
+    "independent manual review"
+  ]
+}

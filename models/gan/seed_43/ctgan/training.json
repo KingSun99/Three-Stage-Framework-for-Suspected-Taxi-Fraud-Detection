@@ -1,0 +1,31 @@
+{
+  "strategy": "joint",
+  "family": "ctgan",
+  "label": null,
+  "real_training_rows": 36000,
+  "epochs": 500,
+  "seed": 43,
+  "class_counts": {
+    "0": 7200,
+    "1": 13573,
+    "2": 1940,
+    "3": 6333,
+    "4": 6954
+  },
+  "training_record_ids_sha256": "49979d9303d2b0730e7645982e22dead2a984e892680ab5e3f7076932f3957f4",
+  "training_input_sha256": "849f0e642f98b81c0d16133144f4b0bff0e92451e322a1858198dfc39b4be3c6",
+  "training_configuration_sha256": "1aa776213adfcb4b615e15e4683cfe087c2219dba49de08e3e8c4ce3c1382878",
+  "generator_updates": 36000,
+  "steps_per_epoch": 72,
+  "all_class_rows_used": true,
+  "model_sha256": "5cdda53d1bba0c97dec68f4af6740213d4ad862ce423b9b807b720f8cf5ed388",
+  "seconds": 1102.1030329999921,
+  "training_condition": "Class label is always the condition column; log-frequency category sampling",
+  "joint_condition_counts": {
+    "1": 7865550,
+    "2": 6251290,
+    "3": 7230825,
+    "0": 7340026,
+    "4": 7312309
+  }
+}

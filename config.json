@@ -1,0 +1,138 @@
+{
+  "release": "NYC_R2_PaperAligned_GitHub_20261115",
+  "methods": [
+    "xgb",
+    "bo_xgb",
+    "smotenc",
+    "ctgan",
+    "pctgan"
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "prior_month": "2026-08",
+  "prior_counts": [
+    22295,
+    181252,
+    1073,
+    3590,
+    4434
+  ],
+  "rounded_prior_percent": [
+    10,
+    85,
+    1,
+    2,
+    2
+  ],
+  "bo_target_counts": {
+    "0": 43470,
+    "1": 369495,
+    "2": 4347,
+    "3": 8694,
+    "4": 8694
+  },
+  "real_training_rows": 36000,
+  "real_validation_rows": 9000,
+  "augmented_bo_rows": 434700,
+  "augmented_final_rows": 443700,
+  "features": [
+    "price_x",
+    "drive_time_x",
+    "drive_mile_x",
+    "speed",
+    "request_wait_min",
+    "request_wait_missing",
+    "weekday",
+    "isWeekend",
+    "isRushHour",
+    "tolls",
+    "congestion_surcharge",
+    "airport_fee",
+    "cbd_congestion_fee",
+    "DV_price",
+    "DV_drive_time",
+    "DV_drive_mile"
+  ],
+  "rush_hours": [
+    7,
+    8,
+    9,
+    16,
+    17,
+    18
+  ],
+  "gan_options": {
+    "embedding_dim": 128,
+    "generator_dim": [
+      256,
+      256
+    ],
+    "discriminator_dim": [
+      256,
+      256
+    ],
+    "generator_lr": 0.0002,
+    "discriminator_lr": 0.0002,
+    "generator_decay": 1e-06,
+    "discriminator_decay": 1e-06,
+    "batch_size": 500,
+    "pac": 10,
+    "discriminator_steps": 1,
+    "log_frequency": true,
+    "epochs": 500,
+    "verbose": false,
+    "cuda": true
+  },
+  "gan_package": "ctgan==0.10.0",
+  "fixed_xgb": {
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "min_child_weight": 1,
+    "gamma": 0,
+    "subsample": 1,
+    "colsample_bytree": 1,
+    "reg_alpha": 0,
+    "reg_lambda": 1,
+    "max_bin": 256
+  },
+  "base_xgb": {
+    "n_jobs": 4,
+    "tree_method": "hist",
+    "eval_metric": "mlogloss",
+    "objective": "multi:softprob",
+    "num_class": 5
+  },
+  "bo": {
+    "calls": 50,
+    "initial_points": 20,
+    "surrogate": "ET",
+    "acquisition": "EI",
+    "xi": 0.01,
+    "objective": "validation accuracy",
+    "seed": "same global seed"
+  },
+  "evaluations": {
+    "august_test_5000": {
+      "path": "data/real/test_5000.parquet",
+      "truth_column": "label",
+      "rows": 5000
+    },
+    "july_external_205374": {
+      "path": "data/external/july_205374.parquet",
+      "truth_column": "proposed_label",
+      "rows": 205374
+    }
+  },
+  "generator_inference": {
+    "mode": "eval",
+    "batchnorm_buffers": "frozen",
+    "torch_no_grad": true,
+    "draw_chunk_rows": 10000
+  }
+}

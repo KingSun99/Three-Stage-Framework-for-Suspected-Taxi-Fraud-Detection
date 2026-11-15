@@ -1,0 +1,27 @@
+{
+  "seed": 44,
+  "method": "pctgan",
+  "bo_seed": 44,
+  "bo_calls": 50,
+  "bo_seconds": 382.7620139999781,
+  "best_validation_accuracy": 0.9981111111111111,
+  "model_parameters": {
+    "n_jobs": 4,
+    "tree_method": "hist",
+    "random_state": 44,
+    "eval_metric": "mlogloss",
+    "objective": "multi:softprob",
+    "num_class": 5,
+    "n_estimators": 190,
+    "learning_rate": 0.38058774230186604,
+    "max_depth": 12,
+    "min_child_weight": 18,
+    "gamma": 0.6929039043041963,
+    "subsample": 0.7380638415179416,
+    "colsample_bytree": 0.7189901455244456,
+    "reg_lambda": 8.172726414016884,
+    "reg_alpha": 6.536923571407948
+  },
+  "bo_rows": 434700,
+  "final_fit_rows": 443700
+}

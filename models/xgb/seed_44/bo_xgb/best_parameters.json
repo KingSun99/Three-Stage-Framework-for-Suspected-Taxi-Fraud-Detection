@@ -1,0 +1,27 @@
+{
+  "seed": 44,
+  "method": "bo_xgb",
+  "bo_seed": 44,
+  "bo_calls": 50,
+  "bo_seconds": 29.26121709999279,
+  "best_validation_accuracy": 1.0,
+  "model_parameters": {
+    "n_jobs": 4,
+    "tree_method": "hist",
+    "random_state": 44,
+    "eval_metric": "mlogloss",
+    "objective": "multi:softprob",
+    "num_class": 5,
+    "n_estimators": 86,
+    "learning_rate": 0.915826700478547,
+    "max_depth": 10,
+    "min_child_weight": 5,
+    "gamma": 9.908226809807818,
+    "subsample": 0.8069670285746477,
+    "colsample_bytree": 0.3836412516592582,
+    "reg_lambda": 5.162216881962177,
+    "reg_alpha": 0.5984002245070535
+  },
+  "bo_rows": 36000,
+  "final_fit_rows": 45000
+}

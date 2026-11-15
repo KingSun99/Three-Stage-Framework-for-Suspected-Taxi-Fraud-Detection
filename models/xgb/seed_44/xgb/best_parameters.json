@@ -1,0 +1,28 @@
+{
+  "seed": 44,
+  "method": "xgb",
+  "bo_seed": null,
+  "bo_calls": 0,
+  "bo_seconds": 0.0,
+  "best_validation_accuracy": null,
+  "model_parameters": {
+    "n_jobs": 4,
+    "tree_method": "hist",
+    "random_state": 44,
+    "eval_metric": "mlogloss",
+    "objective": "multi:softprob",
+    "num_class": 5,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "min_child_weight": 1,
+    "gamma": 0.0,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "reg_alpha": 0.0,
+    "reg_lambda": 1.0,
+    "max_bin": 256
+  },
+  "bo_rows": 0,
+  "final_fit_rows": 45000
+}

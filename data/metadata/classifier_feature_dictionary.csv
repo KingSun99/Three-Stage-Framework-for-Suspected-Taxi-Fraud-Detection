@@ -1,0 +1,17 @@
+feature,definition,unit
+price_x,Base passenger fare,USD
+drive_time_x,Passenger trip duration,minute
+drive_mile_x,Passenger trip distance,km
+speed,60 * distance / duration,km/hour
+request_wait_min,Pickup minus request timestamp,minute
+request_wait_missing,Missing or negative request wait indicator,0/1
+weekday,"Pickup day of week, Monday=0",integer 0-6
+isWeekend,weekday >= 5,0/1
+isRushHour,"Pickup hour in [7,8,9,16,17,18]",0/1
+tolls,Tolls charged for the trip,USD
+congestion_surcharge,Congestion surcharge,USD
+airport_fee,Airport fee,USD
+cbd_congestion_fee,Central business district congestion fee,USD
+DV_price,Base fare minus historical baseline base fare,USD
+DV_drive_time,Duration minus historical baseline duration,minute
+DV_drive_mile,Distance minus historical baseline distance,km
