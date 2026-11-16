@@ -1,6 +1,7 @@
+This is the code for the paper 'A three-stage framework for suspected taxi fraud detection and multi-dimensional interpretation on taxi order data',published in Transportation Research PartC (doi:https://doi.org/10.1016/j.trc.2026.106158).
 # NYC HVFHV Supplementary Experiment
 
-This repository snapshot contains the five NYC classifier arms retained in the R2 manuscript's Table 7:
+This repository snapshot contains the five NYC classifier arms retained in the manuscript's Table 7:
 
 1. Fixed XGBoost (XGB)
 2. Bayesian-optimized XGBoost without augmentation (BO-XGB)
@@ -8,7 +9,7 @@ This repository snapshot contains the five NYC classifier arms retained in the R
 4. CTGAN-BO-XGB
 5. PCTGAN-BO-XGB
 
-It is aligned to the August 2026 development cohort, the fixed August test set (`n=5,000`), and the July external evaluation cohort (`n=205,374`). It does not include the separate generator-loss ablation or the July 500-order manual-review workbook. See [MANUSCRIPT_ALIGNMENT.md](MANUSCRIPT_ALIGNMENT.md) before using the current manual-review results.
+It is aligned to the August 2026 development cohort, the fixed August test set (`n=5,000`), and the July external evaluation cohort (`n=205,374`). It does not include the separate generator-loss ablation or the July 500-order manual-review workbook. 
 
 ## Repository Contents
 
