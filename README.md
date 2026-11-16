@@ -1,4 +1,4 @@
-This is the code for the paper 'A three-stage framework for suspected taxi fraud detection and multi-dimensional interpretation on taxi order data',published in Transportation Research PartC (doi:https://doi.org/10.1016/j.trc.2026.106158).
+This is the code for the paper 'A three-stage framework for suspected taxi fraud detection and multi-dimensional interpretation on taxi order data', published in Transportation Research PartC (doi: https://doi.org/10.1016/j.trc.2026.106158).
 # NYC HVFHV Supplementary Experiment
 
 This repository snapshot contains the five NYC classifier arms retained in the manuscript's Table 7:
